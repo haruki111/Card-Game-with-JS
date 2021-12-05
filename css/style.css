@@ -1,0 +1,568 @@
+@charset "UTF-8";
+/*======================
+#mixins
+======================*/
+/*======================
+  #font
+======================*/
+/*======================
+#common -全体に共通するスタイル
+======================*/
+@media screen and (min-width: 1025px) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .is-tab {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .is-sm {
+    display: none;
+  }
+}
+
+body {
+  font-family: "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "メイリオ", "MS Pゴシック", "MS PGothic", sans-serif;
+  line-height: 1;
+  background-color: #36b484;
+}
+
+img {
+  width: 100%;
+}
+
+.btnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+#gameDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #gameDiv {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #gameDiv {
+    padding: 0 16px;
+  }
+}
+
+#gameDiv .vh-100 {
+  height: 100vh;
+}
+
+#initialForm {
+  color: white;
+}
+
+#initialForm .mainTitle {
+  font-weight: bold;
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+#initialForm form td {
+  padding: 10px;
+}
+
+#initialForm form th {
+  padding: 15px;
+  text-align: center;
+  font-weight: normal;
+  width: 5em;
+  vertical-align: middle;
+}
+
+#initialForm form input[type="text"],
+#initialForm form form textarea {
+  margin: 0 5px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  #initialForm form th {
+    padding: 5px;
+    width: auto;
+    text-align: left;
+  }
+  #initialForm form td {
+    padding: 5px;
+  }
+}
+
+#mainPage {
+  color: #fff;
+  margin-bottom: 300px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #mainPage {
+    margin-bottom: 210px;
+  }
+}
+
+#mainPage #houseCardWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#mainPage #houseCardWrap #houseCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  #mainPage #houseCardWrap #houseCards {
+    padding-bottom: 20px;
+  }
+}
+
+#mainPage #playersWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  #mainPage #playersWrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #mainPage #playersWrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+#mainPage #playersWrap #player {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33%;
+}
+
+#mainPage #playersWrap #player #playerCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10px;
+}
+
+#mainPage #playersWrap .player2 {
+  top: 150%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #mainPage #playersWrap .player2 {
+    top: 95%;
+  }
+}
+
+#houseInfo .playerName,
+#playerInfo .playerName {
+  font-size: 45px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  #houseInfo .playerName,
+  #playerInfo .playerName {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+#houseInfo .playerStatus,
+#playerInfo .playerStatus {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  #houseInfo .playerStatus,
+  #playerInfo .playerStatus {
+    height: 30px;
+  }
+}
+
+#houseInfo .playerStatus p,
+#playerInfo .playerStatus p {
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 767px) {
+  #houseInfo .playerStatus p,
+  #playerInfo .playerStatus p {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+}
+
+#playerScore {
+  height: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  #playerScore {
+    height: 20px;
+  }
+}
+
+#playerScore div {
+  text-align: center;
+  display: table;
+  margin: auto;
+  background-color: rgba(108, 117, 125, 0.7);
+}
+
+#playerScore div .scoreText {
+  padding: 4px 20px;
+}
+
+@media screen and (max-width: 767px) {
+  #playerScore div .scoreText {
+    font-size: 14px;
+  }
+}
+
+#card {
+  background-color: #fff;
+  margin: 0 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  #card {
+    margin: 0 5px;
+  }
+}
+
+#card img {
+  width: 45px;
+  height: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  #card img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#card .cardText {
+  padding-top: 5px;
+}
+
+.btn {
+  width: 150px;
+}
+
+.input-group-btn .btn {
+  width: 45px;
+}
+
+.action {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  .action {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.action button {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .action button {
+    margin: 10px 10px;
+  }
+}
+
+.bets {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+}
+
+.bets .betChoice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bets .betChoice .bet {
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .bets .betChoice .bet .input-group {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bets .betChoice .bet .input-group #minusBet {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bets .betChoice .bet .input-group input[type="text"] {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bets .betChoice .bet .input-group #plusBet {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bets .betChoice .bet p {
+    font-size: 14px;
+  }
+}
+
+.bets .betSubmit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.position {
+  top: 155%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+@media screen and (max-width: 767px) {
+  .position {
+    top: 150%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .position {
+    top: 125%;
+  }
+}
+
+#result {
+  top: 50%;
+  padding: 20px;
+  position: absolute;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 767px) {
+  #result {
+    width: 100%;
+  }
+}
+
+#result h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#result ul {
+  list-style: disc;
+  padding: 0 5px 0 5px;
+}
+
+#result ul li {
+  margin: 10px 0;
+}
+
+.round {
+  left: 90%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  font-size: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  .round {
+    top: 0%;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .round {
+    top: 0%;
+    left: 90%;
+    -webkit-transform: translate(-50%, -75%);
+            transform: translate(-50%, -75%);
+  }
+}
+
+.round .roundTextWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.finalResult {
+  color: black;
+  position: absolute;
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 767px) {
+  .finalResult {
+    top: 85%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+}
+
+.finalResult h3 {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.finalResult table th,
+.finalResult table td {
+  text-align: center;
+}
+
+.finalResult .btnWrap {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=style.css.map */
