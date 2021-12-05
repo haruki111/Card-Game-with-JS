@@ -26,10 +26,6 @@
   }
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
 body {
   font-family: "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "メイリオ", "MS Pゴシック", "MS PGothic", sans-serif;
   line-height: 1;
@@ -67,7 +63,6 @@ img {
   margin: 0 auto;
   padding: 40px;
   height: 100vh;
-  height: -webkit-fill-available;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {

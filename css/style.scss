@@ -46,10 +46,6 @@ $font-family-english: sans-serif;
   }
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
 body {
   font-family: $font-family-default;
   line-height: 1;
@@ -75,7 +71,6 @@ img {
   margin: 0 auto;
   padding: 40px;
   height: 100vh;
-  height: -webkit-fill-available;
 
   @include mq(tab) {
     padding: 0 24px;
