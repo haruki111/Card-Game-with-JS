@@ -46,6 +46,10 @@ $font-family-english: sans-serif;
   }
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   font-family: $font-family-default;
   line-height: 1;
@@ -70,15 +74,14 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
+  height: 100vh;
+  height: -webkit-fill-available;
 
   @include mq(tab) {
     padding: 0 24px;
   }
   @include mq(sm) {
     padding: 0 16px;
-  }
-  .vh-100 {
-    height: 100vh;
   }
 }
 
